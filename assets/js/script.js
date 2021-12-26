@@ -6,6 +6,7 @@ $("#currentDay").html(currentDay);
 $(document).ready(function () {
     //use moment.js to track the time and update the timeblock classes accordingly
     function trackTime () {
+        //check time with moment.js
         let currentTime = moment().hour();
         
         $(".time-block").each(function () {
@@ -28,6 +29,7 @@ $(document).ready(function () {
             }
         })
     }
+
     //save task to local storage when save button is clicked
     $(".saveBtn").on("click", function () {
         //get task text from the textarea div, which is a sibling of the save button div
@@ -52,4 +54,3 @@ $(document).ready(function () {
     //call the trackTime function
     trackTime();
 })
-
